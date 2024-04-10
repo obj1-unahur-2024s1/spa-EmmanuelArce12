@@ -9,12 +9,12 @@ object bruno{
 	method comerFideos() {peso += 250 
 						tieneSed = true}
 	method correr(){peso -=300}
-	method recibirMasajes() = esFeliz 
-	method verNoticiero()=not esFeliz
+	method recibirMasajes() {esFeliz = true}
+	method verNoticiero(){esFeliz = false} 
 	method discutir() {} // polimorf
 	method estaPerfecto() = esFeliz and not tieneSed and peso >= 50000 and peso <= 70000
 	method mediodiaEnCasa(){ self.comerFideos()
 		self.tomarAgua()
-		return self.verNoticiero() 
+		 self.verNoticiero() 
 		}
 }
